@@ -7,10 +7,13 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build:single-spa": "ng build --prod --deploy-url http://localhost:4200/",
+    "serve:single-spa": "ng serve --disable-host-check --port 4200 --deploy-url http://localhost:4200/ --live-reload false"
   },
   "private": true,
   "dependencies": {
+    "@angular-builders/custom-webpack": "^8",
     "@angular/animations": "~10.0.9",
     "@angular/common": "~10.0.9",
     "@angular/compiler": "~10.0.9",
@@ -20,6 +23,8 @@
     "@angular/platform-browser-dynamic": "~10.0.9",
     "@angular/router": "~10.0.9",
     "rxjs": "~6.5.5",
+    "single-spa": "^5.5.5",
+    "single-spa-angular": "^4.3.2",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
   },
